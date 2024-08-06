@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login Screen-->
+        <!--Giriş Yap-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,6 +66,9 @@
                                 <color key="tintColor" name="TextWhiteColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JyS-sL-RyZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabınız yok mu?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWe-VC-G5H">
                                 <rect key="frame" x="16" y="724" width="219" height="31"/>
@@ -84,6 +87,7 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="registerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vx8-xK-eHu"/>
                                     <segue destination="34j-LB-4QA" kind="show" id="Cqu-o4-sOr"/>
                                 </connections>
                             </button>
@@ -120,16 +124,21 @@
                             <constraint firstItem="gnw-HL-GI8" firstAttribute="top" secondItem="wWm-om-TSg" secondAttribute="bottom" constant="8" id="rL3-hR-bhB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login Screen" id="qed-a8-xmJ"/>
+                    <navigationItem key="navigationItem" title="Giriş Yap" id="qed-a8-xmJ"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="gnw-HL-GI8" id="fXD-AG-OE1"/>
+                        <outlet property="loginButton" destination="Tgx-ex-1d3" id="KQK-RS-Zb8"/>
+                        <outlet property="passTextField" destination="bow-r5-XlR" id="6Wf-JG-K3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="255.72519083969465" y="36.619718309859159"/>
         </scene>
-        <!--Register Screen-->
+        <!--Register View Controller-->
         <scene sceneID="Ght-LQ-OGi">
             <objects>
-                <viewController id="34j-LB-4QA" sceneMemberID="viewController">
+                <viewController id="34j-LB-4QA" customClass="RegisterViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svy-p6-rLc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,6 +224,9 @@
                                 <color key="tintColor" name="TextWhiteColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol"/>
+                                <connections>
+                                    <action selector="registerButtonClicked:" destination="34j-LB-4QA" eventType="touchUpInside" id="O6F-0J-9rj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I9M-op-gWv"/>
@@ -257,11 +269,18 @@
                             <constraint firstItem="hg8-Wq-WTE" firstAttribute="leading" secondItem="xHZ-9h-Quw" secondAttribute="leading" id="zvc-RT-4u8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Register Screen" id="KrG-Z6-O9p"/>
+                    <navigationItem key="navigationItem" id="KrG-Z6-O9p"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="OQK-qD-vhJ" id="DeW-0A-bqV"/>
+                        <outlet property="lastnameTextField" destination="tWs-A9-N1s" id="zMq-zO-EyJ"/>
+                        <outlet property="nameTextField" destination="hg8-Wq-WTE" id="KZB-2Q-3Hh"/>
+                        <outlet property="passTextField" destination="fUa-nv-Mie" id="LTo-Ov-tL8"/>
+                        <outlet property="registerButton" destination="1wL-Do-8Gw" id="OJU-6E-97w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lz-EC-DxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255.72519083969465" y="738.73239436619724"/>
+            <point key="canvasLocation" x="256" y="775"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="NlN-bU-a4Y">
@@ -317,22 +336,23 @@
             <point key="canvasLocation" x="1208" y="37"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Logo" width="942" height="710"/>
         <namedColor name="BGColor">
-            <color red="0.99607843137254903" green="0.98039215686274506" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99599999189376831" green="0.98000001907348633" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="ButtonColor">
-            <color red="0.32156862745098036" green="0.41960784313725491" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32199999690055847" green="0.41999998688697815" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondTextColor">
-            <color red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextBlackColor">
-            <color red="0.2196078431372549" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.2199999988079071" green="0.21600000560283661" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TextWhiteColor">
-            <color red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98799997568130493" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
