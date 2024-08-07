@@ -20,6 +20,8 @@
 		C333E0462C62B01E0055CB36 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C333E0452C62B01E0055CB36 /* FirebaseAuth */; };
 		C333E0482C62B01E0055CB36 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C333E0472C62B01E0055CB36 /* FirebaseFirestore */; };
 		C333E04A2C62B01E0055CB36 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C333E0492C62B01E0055CB36 /* FirebaseStorage */; };
+		C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E742C63921D000A5A5C /* NetworkManager.swift */; };
+		C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E762C639325000A5A5C /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C333E03A2C60FD8B0055CB36 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C333E03E2C60FDCA0055CB36 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C333E0402C62AF240055CB36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3458E742C63921D000A5A5C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C3458E762C639325000A5A5C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C333E03E2C60FDCA0055CB36 /* LoginViewModel.swift */,
+				C3458E762C639325000A5A5C /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 		C333E0392C60E3CD0055CB36 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C3458E742C63921D000A5A5C /* NetworkManager.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -213,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */,
 				C333E0252C60E0E60055CB36 /* LoginViewController.swift in Sources */,
+				C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */,
 				C333E0212C60E0E60055CB36 /* AppDelegate.swift in Sources */,
 				C333E0232C60E0E60055CB36 /* SceneDelegate.swift in Sources */,
 				C333E03F2C60FDCA0055CB36 /* LoginViewModel.swift in Sources */,

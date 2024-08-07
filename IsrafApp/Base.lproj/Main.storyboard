@@ -228,6 +228,9 @@
                                     <action selector="registerButtonClicked:" destination="34j-LB-4QA" eventType="touchUpInside" id="O6F-0J-9rj"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="IHg-7R-35x">
+                                <rect key="frame" x="186" y="758" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I9M-op-gWv"/>
                         <color key="backgroundColor" name="BGColor"/>
@@ -235,6 +238,7 @@
                             <constraint firstItem="tWs-A9-N1s" firstAttribute="trailing" secondItem="OQK-qD-vhJ" secondAttribute="trailing" id="1VL-Kc-wH1"/>
                             <constraint firstItem="WIc-Dc-mIF" firstAttribute="leading" secondItem="hg8-Wq-WTE" secondAttribute="leading" id="2CH-i1-lxN"/>
                             <constraint firstItem="TcJ-0p-BiZ" firstAttribute="leading" secondItem="tWs-A9-N1s" secondAttribute="leading" id="3rJ-1v-Vb3"/>
+                            <constraint firstItem="IHg-7R-35x" firstAttribute="centerX" secondItem="fUa-nv-Mie" secondAttribute="centerX" id="49V-AK-q4l"/>
                             <constraint firstItem="AKo-EU-wJK" firstAttribute="leading" secondItem="WIc-Dc-mIF" secondAttribute="leading" id="63K-EQ-L50"/>
                             <constraint firstItem="I9M-op-gWv" firstAttribute="trailing" secondItem="AKo-EU-wJK" secondAttribute="trailing" constant="23" id="8UB-pE-QEv"/>
                             <constraint firstItem="yku-Q2-uXQ" firstAttribute="leading" secondItem="svy-p6-rLc" secondAttribute="leadingMargin" id="BQT-Gn-To1"/>
@@ -247,7 +251,9 @@
                             <constraint firstItem="I9M-op-gWv" firstAttribute="trailing" secondItem="TcJ-0p-BiZ" secondAttribute="trailing" constant="36" id="MRL-bJ-5mx"/>
                             <constraint firstItem="AKo-EU-wJK" firstAttribute="top" secondItem="yku-Q2-uXQ" secondAttribute="bottom" constant="8" id="MTz-XH-iuK"/>
                             <constraint firstItem="hg8-Wq-WTE" firstAttribute="top" secondItem="tWs-A9-N1s" secondAttribute="top" id="Mle-W9-yYC"/>
+                            <constraint firstItem="IHg-7R-35x" firstAttribute="top" secondItem="1wL-Do-8Gw" secondAttribute="bottom" constant="32" id="O1b-xE-iQo"/>
                             <constraint firstItem="OQK-qD-vhJ" firstAttribute="trailing" secondItem="fUa-nv-Mie" secondAttribute="trailing" id="Opk-qO-1yB"/>
+                            <constraint firstItem="IHg-7R-35x" firstAttribute="leading" secondItem="I9M-op-gWv" secondAttribute="leading" constant="186" id="P5c-Gf-F7M"/>
                             <constraint firstItem="xHZ-9h-Quw" firstAttribute="leading" secondItem="OQK-qD-vhJ" secondAttribute="leading" id="Rkl-A1-ayo"/>
                             <constraint firstItem="hg8-Wq-WTE" firstAttribute="top" secondItem="WIc-Dc-mIF" secondAttribute="bottom" constant="8" id="S3Y-z7-CjJ"/>
                             <constraint firstItem="T71-XV-raJ" firstAttribute="trailing" secondItem="1wL-Do-8Gw" secondAttribute="trailing" id="S7c-D7-Wv7"/>
@@ -273,6 +279,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="OQK-qD-vhJ" id="DeW-0A-bqV"/>
                         <outlet property="lastnameTextField" destination="tWs-A9-N1s" id="zMq-zO-EyJ"/>
+                        <outlet property="loadIndicator" destination="IHg-7R-35x" id="Ze4-et-Fgt"/>
                         <outlet property="nameTextField" destination="hg8-Wq-WTE" id="KZB-2Q-3Hh"/>
                         <outlet property="passTextField" destination="fUa-nv-Mie" id="LTo-Ov-tL8"/>
                         <outlet property="registerButton" destination="1wL-Do-8Gw" id="OJU-6E-97w"/>
