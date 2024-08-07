@@ -7,21 +7,37 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 final class NetworkManager {
     static let shared = NetworkManager()
     
     private init() {}
     
-    func registerUser(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if let error = error {
-                completion(.failure(error))
-            } else if let authResult = authResult {
-                completion(.success(authResult))
+    private let db = Firestore.firestore()
+    
+    func registerUser(email: String, password: String, firstName: String, lastName: String, completion: @escaping (Result<Void, Error>) -> Void) {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let error = error {
+                    completion(.failure(error))
+                } else if let authResult = authResult {
+                    let uid = authResult.user.uid
+                    let userData: [String: Any] = [
+                        "firstName": firstName,
+                        "lastName": lastName,
+                        "email": email,
+                        "createdAt": Timestamp(date: Date())
+                    ]
+                    self.db.collection("users").document(uid).setData(userData) { error in
+                        if let error = error {
+                            completion(.failure(error))
+                        } else {
+                            completion(.success(()))
+                        }
+                    }
+                }
             }
         }
-    }
     
     func loginUser(email: String, password: String, completion: @escaping (Result<AuthDataResult, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -34,11 +50,12 @@ final class NetworkManager {
     }
     
     func signOutUser(completion: @escaping (Result<Void, Error>) -> Void) {
-            do {
-                try Auth.auth().signOut()
-                completion(.success(()))
-            } catch let signOutError as NSError {
-                completion(.failure(signOutError))
-            }
+        do {
+            try Auth.auth().signOut()
+            completion(.success(()))
+        } catch let signOutError as NSError {
+            completion(.failure(signOutError))
         }
+    }
+    
 }

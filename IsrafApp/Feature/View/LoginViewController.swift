@@ -18,13 +18,11 @@ final class LoginViewController: UIViewController {
     //MARK: -FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButtonSettings()
+        initScreen()
         print("Login!")
-        
-        
     }
     
-    func loginButtonSettings() {
+    func initScreen() {
         loginButton.layer.cornerRadius = 8
     }
     
@@ -33,6 +31,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
+        
     }
     
 }

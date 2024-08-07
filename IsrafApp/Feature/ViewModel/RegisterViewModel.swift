@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RegisterViewModelProtocol {
     var delegate: RegisterViewModelOutputProtocol? { get set }
-    func registerUser(email: String, password: String)
+    func registerUser(email: String, password: String, firstName: String, lastName: String)
 }
 
 protocol RegisterViewModelOutputProtocol: AnyObject {
@@ -22,12 +23,12 @@ protocol RegisterViewModelOutputProtocol: AnyObject {
 final class RegisterViewModel {
     weak var delegate: RegisterViewModelOutputProtocol?
     
-    func registerUser(email: String, password: String) {
+    func registerUser(email: String, password: String, firstName: String, lastName: String) {
         if email.isEmpty || password.isEmpty {
             return
         }
         self.delegate?.startLoading()
-        NetworkManager.shared.registerUser(email: email, password: password) { result in
+        NetworkManager.shared.registerUser(email: email, password: password, firstName: firstName, lastName: lastName) { result in
 
             switch result {
             case .success(let authResult):

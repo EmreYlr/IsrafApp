@@ -15,43 +15,54 @@ final class RegisterViewController: UIViewController {
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
-    
     var registerViewModel: RegisterViewModelProtocol = RegisterViewModel()
     
     //MARK: -FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerViewModel.delegate = self
-        registerButtonSettings()
-        loadIndicator.isHidden = true
+        initScreen()
         print("Register")
     }
-    func registerButtonSettings() {
+    
+    func initScreen() {
+        registerViewModel.delegate = self
         registerButton.layer.cornerRadius = 8
+        loadIndicator.isHidden = true
+        loadIndicator.color = .white
     }
     
     @IBAction func registerButtonClicked(_ sender: Any) {
-        registerViewModel.registerUser(email: emailTextField.text ?? "", password: passTextField.text ?? "")
+        registerViewModel.registerUser(email: emailTextField.text ?? "", password: passTextField.text ?? "", firstName: nameTextField.text ?? "", lastName: lastnameTextField.text ?? "")
+    }
+    
+    func backToLogin() {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
+//MARK: -RegisterViewModelOutputProtocol
 extension RegisterViewController: RegisterViewModelOutputProtocol {
     func startLoading() {
+        registerButton.setTitle("", for: .normal)
+        registerButton.isEnabled = false
         loadIndicator.isHidden = false
         loadIndicator.startAnimating()
     }
     
     func stopLoading() {
+        registerButton.setTitle("Kayıt Ol", for: .normal)
+        registerButton.isEnabled = true
         loadIndicator.stopAnimating()
         loadIndicator.isHidden = true
         
     }
     
     func update() {
+        backToLogin()
         print("Update")
     }
     
     func error() {
-        
+        //TODO: - Error Alert
     }
 }
