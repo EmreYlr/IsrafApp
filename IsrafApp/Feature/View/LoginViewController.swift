@@ -19,10 +19,10 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initScreen()
-        print("Login!")
     }
     
     func initScreen() {
+        loginViewModel.delegate = self
         loginButton.layer.cornerRadius = 8
     }
     
@@ -31,11 +31,28 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        
+        loginViewModel.loginUser(email: emailTextField.text ?? "", password: passTextField.text ?? "")
     }
     
 }
 
 //MARK: LoginViewModelOutputProtocol
-extension LoginViewController: LoginViewModelOutputProtocol {}
+extension LoginViewController: LoginViewModelOutputProtocol {
+    func startLoading() {
+        
+    }
+    
+    func stopLoading() {
+        
+    }
+    
+    func update(uid: String) {
+        print("Giriş Başarılı")
+        print("UID: \(uid)")
+    }
+    
+    func error(error: any Error) {
+        showAlert(title: "Hata", message: "E-posta veya şifre hatalı. Hata: \(error.localizedDescription)")
+    }
+}
 

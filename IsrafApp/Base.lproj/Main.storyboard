@@ -58,7 +58,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgx-ex-1d3">
-                                <rect key="frame" x="16" y="656" width="354" height="49"/>
+                                <rect key="frame" x="16" y="656" width="361" height="49"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="mlz-bQ-paz"/>
@@ -120,7 +120,7 @@
                             <constraint firstItem="C4T-S3-R4P" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="k6A-nc-wnc"/>
                             <constraint firstItem="pyI-em-RNb" firstAttribute="top" secondItem="Tgx-ex-1d3" secondAttribute="bottom" constant="17" id="p9I-qN-rHb"/>
                             <constraint firstItem="wWm-om-TSg" firstAttribute="trailing" secondItem="BCm-My-g4g" secondAttribute="trailing" id="pcD-ab-FLm"/>
-                            <constraint firstItem="BCm-My-g4g" firstAttribute="trailing" secondItem="Tgx-ex-1d3" secondAttribute="trailing" id="qef-kJ-3KB"/>
+                            <constraint firstItem="BCm-My-g4g" firstAttribute="trailing" secondItem="Tgx-ex-1d3" secondAttribute="trailing" constant="-7" id="qef-kJ-3KB"/>
                             <constraint firstItem="gnw-HL-GI8" firstAttribute="top" secondItem="wWm-om-TSg" secondAttribute="bottom" constant="8" id="rL3-hR-bhB"/>
                         </constraints>
                     </view>
@@ -216,7 +216,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wL-Do-8Gw">
-                                <rect key="frame" x="16" y="677" width="354" height="49"/>
+                                <rect key="frame" x="16" y="677" width="361" height="49"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <color key="tintColor" name="TextWhiteColor"/>
                                 <state key="normal" title="Button"/>
@@ -240,7 +240,7 @@
                             <constraint firstItem="T71-XV-raJ" firstAttribute="leading" secondItem="fUa-nv-Mie" secondAttribute="leading" id="44S-VG-j7h"/>
                             <constraint firstItem="fUa-nv-Mie" firstAttribute="centerX" secondItem="IHg-7R-35x" secondAttribute="centerX" id="6LG-xX-AiS"/>
                             <constraint firstItem="TcJ-0p-BiZ" firstAttribute="leading" secondItem="WIc-Dc-mIF" secondAttribute="trailing" constant="31" id="7f2-03-Cwh"/>
-                            <constraint firstItem="T71-XV-raJ" firstAttribute="trailing" secondItem="1wL-Do-8Gw" secondAttribute="trailing" id="ASg-Ly-mRx"/>
+                            <constraint firstItem="T71-XV-raJ" firstAttribute="trailing" secondItem="1wL-Do-8Gw" secondAttribute="trailing" constant="-7" id="ASg-Ly-mRx"/>
                             <constraint firstItem="OQK-qD-vhJ" firstAttribute="leading" secondItem="T71-XV-raJ" secondAttribute="leading" id="Bqe-hL-JFp"/>
                             <constraint firstItem="TcJ-0p-BiZ" firstAttribute="top" secondItem="AKo-EU-wJK" secondAttribute="bottom" constant="22" id="EMw-No-3BR"/>
                             <constraint firstItem="IHg-7R-35x" firstAttribute="leading" secondItem="I9M-op-gWv" secondAttribute="leading" constant="186" id="HRf-oO-2fI"/>
@@ -288,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lz-EC-DxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="775"/>
+            <point key="canvasLocation" x="255.72519083969465" y="774.64788732394368"/>
         </scene>
         <!--Home Screen-->
         <scene sceneID="NlN-bU-a4Y">

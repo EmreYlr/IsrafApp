@@ -21,14 +21,13 @@ final class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initScreen()
-        print("Register")
     }
     
     func initScreen() {
         registerViewModel.delegate = self
         registerButton.layer.cornerRadius = 8
-        loadIndicator.isHidden = true
         loadIndicator.color = .white
+        loadIndicator.isHidden = true
     }
     
     @IBAction func registerButtonClicked(_ sender: Any) {
@@ -58,11 +57,11 @@ extension RegisterViewController: RegisterViewModelOutputProtocol {
     }
     
     func update() {
+        showAlert(title: "Başarılı", message: "Kayıt başarılı")
         backToLogin()
-        print("Update")
     }
     
-    func error() {
-        //TODO: - Error Alert
+    func error(error: Error){
+        showAlert(title: "Hata", message: "Kayıt başarısız, lütfen tekrar deneyin. Hata: \(error.localizedDescription)")
     }
 }

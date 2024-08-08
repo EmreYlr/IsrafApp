@@ -17,7 +17,7 @@ protocol RegisterViewModelOutputProtocol: AnyObject {
     func startLoading()
     func stopLoading()
     func update()
-    func error()
+    func error(error: Error)
 }
 
 final class RegisterViewModel {
@@ -25,23 +25,22 @@ final class RegisterViewModel {
     
     func registerUser(email: String, password: String, firstName: String, lastName: String) {
         if email.isEmpty || password.isEmpty {
+            self.delegate?.error(error: NSError(domain: "Error", code: 0, userInfo: [NSLocalizedDescriptionKey: "Email and password can not be empty"]))
             return
         }
         self.delegate?.startLoading()
         NetworkManager.shared.registerUser(email: email, password: password, firstName: firstName, lastName: lastName) { result in
-
-            switch result {
-            case .success(let authResult):
-                //print(authResult)
-                self.delegate?.update()
-            case .failure(let error):
-                print(error)
-                self.delegate?.error()
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    self.delegate?.update()
+                case .failure(let error):
+                    self.delegate?.error(error: error)
+                }
+                self.delegate?.stopLoading()
             }
-            self.delegate?.stopLoading()
         }
     }
-    
 }
 
 extension RegisterViewModel: RegisterViewModelProtocol {}
