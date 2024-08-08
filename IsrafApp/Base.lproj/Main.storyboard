@@ -314,11 +314,11 @@
             </objects>
             <point key="canvasLocation" x="3028" y="37"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profil-->
         <scene sceneID="9Gr-87-uw3">
             <objects>
                 <navigationController id="cCu-8T-otf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="RqS-1K-EcE">
+                    <tabBarItem key="tabBarItem" title="Profil" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="RqS-1K-EcE">
                         <color key="badgeColor" name="ButtonColor"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xmx-Q9-R7t">
@@ -333,7 +333,7 @@
             </objects>
             <point key="canvasLocation" x="2111" y="775"/>
         </scene>
-        <!--deneme-->
+        <!--Profile-->
         <scene sceneID="55v-Po-1XK">
             <objects>
                 <viewController id="NZG-mk-OsP" sceneMemberID="viewController">
@@ -343,17 +343,17 @@
                         <viewLayoutGuide key="safeArea" id="SDe-qJ-g8m"/>
                         <color key="backgroundColor" name="BGColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="deneme" id="Xs0-Ar-X9C"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Xs0-Ar-X9C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuR-L5-8J3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3027" y="775"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Ana Sayfa-->
         <scene sceneID="1nQ-bz-QYo">
             <objects>
                 <navigationController id="IBA-Fv-O7b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="7gV-qQ-9op"/>
+                    <tabBarItem key="tabBarItem" title="Ana Sayfa" image="house.fill" catalog="system" selectedImage="house.fill" id="7gV-qQ-9op"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K2a-EO-sSp">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -408,6 +408,8 @@
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Logo" width="942" height="710"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <namedColor name="BGColor">
             <color red="0.99599999189376831" green="0.98000001907348633" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

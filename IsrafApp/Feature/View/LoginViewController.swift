@@ -66,6 +66,7 @@ extension LoginViewController: LoginViewModelOutputProtocol {
                 }
             }
         }
+        navigationController?.navigationBar.isHidden = true
         navigationController?.setViewControllers([tabBarController], animated: true)
     }
     
