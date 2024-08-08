@@ -58,10 +58,15 @@ extension LoginViewController: LoginViewModelOutputProtocol {
     func update(uid: String) {
         print("Giriş Başarılı")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        homeVC.homeViewModel.uid = uid
-        homeVC.navigationItem.hidesBackButton = true
-        navigationController?.pushViewController(homeVC, animated: true)
+        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        if let viewControllers = tabBarController.viewControllers {
+            for viewController in viewControllers {
+                if let homeVC = viewController as? HomeViewController {
+                    homeVC.homeViewModel.uid = uid
+                }
+            }
+        }
+        navigationController?.setViewControllers([tabBarController], animated: true)
     }
     
     func error(error: any Error) {
