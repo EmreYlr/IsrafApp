@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,6 +90,9 @@
                                     <segue destination="34j-LB-4QA" kind="show" id="Cqu-o4-sOr"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="MhZ-gi-cZt">
+                                <rect key="frame" x="186" y="670" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BGColor"/>
@@ -103,6 +105,7 @@
                             <constraint firstItem="bow-r5-XlR" firstAttribute="top" secondItem="BCm-My-g4g" secondAttribute="bottom" constant="8" id="GNG-nH-LaH"/>
                             <constraint firstItem="BCm-My-g4g" firstAttribute="top" secondItem="gnw-HL-GI8" secondAttribute="bottom" constant="23" id="GaU-h4-sOz"/>
                             <constraint firstItem="C4T-S3-R4P" firstAttribute="leading" secondItem="PWs-UD-ppr" secondAttribute="leading" id="Hsc-6k-HiQ"/>
+                            <constraint firstItem="MhZ-gi-cZt" firstAttribute="centerY" secondItem="Tgx-ex-1d3" secondAttribute="centerY" id="IkG-uy-Lif"/>
                             <constraint firstItem="gnw-HL-GI8" firstAttribute="leading" secondItem="BCm-My-g4g" secondAttribute="leading" id="M3w-Rw-sxG"/>
                             <constraint firstItem="EWe-VC-G5H" firstAttribute="top" secondItem="Tgx-ex-1d3" secondAttribute="bottom" constant="19" id="PeN-Wh-uJr"/>
                             <constraint firstItem="EWe-VC-G5H" firstAttribute="centerY" secondItem="pyI-em-RNb" secondAttribute="centerY" id="Skt-NO-11m"/>
@@ -118,15 +121,19 @@
                             <constraint firstItem="PWs-UD-ppr" firstAttribute="leading" secondItem="wWm-om-TSg" secondAttribute="leading" id="k1h-6t-4Ld"/>
                             <constraint firstItem="PWs-UD-ppr" firstAttribute="top" secondItem="C4T-S3-R4P" secondAttribute="bottom" constant="8" id="k2u-pH-Ctg"/>
                             <constraint firstItem="C4T-S3-R4P" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="k6A-nc-wnc"/>
+                            <constraint firstItem="MhZ-gi-cZt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="nHP-LO-771"/>
                             <constraint firstItem="pyI-em-RNb" firstAttribute="top" secondItem="Tgx-ex-1d3" secondAttribute="bottom" constant="17" id="p9I-qN-rHb"/>
                             <constraint firstItem="wWm-om-TSg" firstAttribute="trailing" secondItem="BCm-My-g4g" secondAttribute="trailing" id="pcD-ab-FLm"/>
                             <constraint firstItem="BCm-My-g4g" firstAttribute="trailing" secondItem="Tgx-ex-1d3" secondAttribute="trailing" constant="-7" id="qef-kJ-3KB"/>
                             <constraint firstItem="gnw-HL-GI8" firstAttribute="top" secondItem="wWm-om-TSg" secondAttribute="bottom" constant="8" id="rL3-hR-bhB"/>
+                            <constraint firstItem="MhZ-gi-cZt" firstAttribute="centerX" secondItem="Tgx-ex-1d3" secondAttribute="centerX" id="yH1-WN-KJI"/>
+                            <constraint firstItem="EWe-VC-G5H" firstAttribute="top" secondItem="MhZ-gi-cZt" secondAttribute="bottom" constant="34" id="yuI-cy-ysS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Giriş Yap" id="qed-a8-xmJ"/>
                     <connections>
                         <outlet property="emailTextField" destination="gnw-HL-GI8" id="fXD-AG-OE1"/>
+                        <outlet property="loadIndicator" destination="MhZ-gi-cZt" id="Mjj-35-jTI"/>
                         <outlet property="loginButton" destination="Tgx-ex-1d3" id="KQK-RS-Zb8"/>
                         <outlet property="passTextField" destination="bow-r5-XlR" id="6Wf-JG-K3Y"/>
                     </connections>
@@ -293,12 +300,12 @@
         <!--Home Screen-->
         <scene sceneID="NlN-bU-a4Y">
             <objects>
-                <viewController id="Ndn-mP-q1a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Ndn-mP-q1a" customClass="HomeViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2xc-A1-fWj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="l5F-Fl-9cW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BGColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home Screen" id="qvJ-Ey-2tf"/>
                 </viewController>
@@ -362,8 +369,5 @@
         <namedColor name="TextWhiteColor">
             <color red="0.98799997568130493" green="0.98799997568130493" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -24,6 +24,8 @@
 		C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E762C639325000A5A5C /* RegisterViewModel.swift */; };
 		C3A634CE2C64DBCD00EF8C9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634CD2C64DBCD00EF8C9C /* User.swift */; };
 		C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */; };
+		C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */; };
+		C3A634D52C64E51D00EF8C9C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D42C64E51D00EF8C9C /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		C3458E762C639325000A5A5C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C3A634CD2C64DBCD00EF8C9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C3A634D42C64E51D00EF8C9C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			children = (
 				C333E03E2C60FDCA0055CB36 /* LoginViewModel.swift */,
 				C3458E762C639325000A5A5C /* RegisterViewModel.swift */,
+				C3A634D42C64E51D00EF8C9C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				C333E0242C60E0E60055CB36 /* LoginViewController.swift */,
 				C333E03A2C60FD8B0055CB36 /* RegisterViewController.swift */,
+				C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,10 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */,
+				C3A634D52C64E51D00EF8C9C /* HomeViewModel.swift in Sources */,
 				C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */,
 				C333E0252C60E0E60055CB36 /* LoginViewController.swift in Sources */,
 				C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */,
 				C333E0212C60E0E60055CB36 /* AppDelegate.swift in Sources */,
+				C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */,
 				C3A634CE2C64DBCD00EF8C9C /* User.swift in Sources */,
 				C333E0232C60E0E60055CB36 /* SceneDelegate.swift in Sources */,
 				C333E03F2C60FDCA0055CB36 /* LoginViewModel.swift in Sources */,
