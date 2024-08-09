@@ -15,22 +15,20 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10 // Toplam hücre sayısı
+        return 10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210
     }
     
-    // Her bir hücre arasında boşluk oluşturmak için section header yüksekliği ekleyebilirsiniz.
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10 // Her hücre arasında 10 pt boşluk
+        return 5
     }
     
-    // Boş header view return edin.
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = .clear // Şeffaf bir görünüm oluşturun
+        headerView.backgroundColor = .clear
         return headerView
     }
     
