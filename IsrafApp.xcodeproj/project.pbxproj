@@ -22,6 +22,9 @@
 		C333E04A2C62B01E0055CB36 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C333E0492C62B01E0055CB36 /* FirebaseStorage */; };
 		C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E742C63921D000A5A5C /* NetworkManager.swift */; };
 		C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E762C639325000A5A5C /* RegisterViewModel.swift */; };
+		C36A2E652C664FCC00C2A4FB /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36A2E642C664FCC00C2A4FB /* OrderTableViewCell.xib */; };
+		C36A2E662C664FCC00C2A4FB /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2E632C664FCC00C2A4FB /* OrderTableViewCell.swift */; };
+		C36A2E682C6652F000C2A4FB /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2E672C6652F000C2A4FB /* HomeViewController+TableView.swift */; };
 		C3A634CE2C64DBCD00EF8C9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634CD2C64DBCD00EF8C9C /* User.swift */; };
 		C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */; };
 		C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */; };
@@ -42,6 +45,9 @@
 		C333E0402C62AF240055CB36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3458E742C63921D000A5A5C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C3458E762C639325000A5A5C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C36A2E632C664FCC00C2A4FB /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		C36A2E642C664FCC00C2A4FB /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		C36A2E672C6652F000C2A4FB /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		C3A634CD2C64DBCD00EF8C9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -113,9 +119,11 @@
 		C333E0362C60E36B0055CB36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C36A2E622C664FA600C2A4FB /* SubView */,
 				C333E0242C60E0E60055CB36 /* LoginViewController.swift */,
 				C333E03A2C60FD8B0055CB36 /* RegisterViewController.swift */,
 				C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */,
+				C36A2E672C6652F000C2A4FB /* HomeViewController+TableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +156,15 @@
 				C3458E742C63921D000A5A5C /* NetworkManager.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		C36A2E622C664FA600C2A4FB /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				C36A2E632C664FCC00C2A4FB /* OrderTableViewCell.swift */,
+				C36A2E642C664FCC00C2A4FB /* OrderTableViewCell.xib */,
+			);
+			path = SubView;
 			sourceTree = "<group>";
 		};
 		C3A634CF2C64DE5800EF8C9C /* Extension */ = {
@@ -226,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C333E02A2C60E0E70055CB36 /* Assets.xcassets in Resources */,
+				C36A2E652C664FCC00C2A4FB /* OrderTableViewCell.xib in Resources */,
 				C333E0412C62AF240055CB36 /* GoogleService-Info.plist in Resources */,
 				C333E02D2C60E0E70055CB36 /* Base in Resources */,
 				C333E0282C60E0E60055CB36 /* Base in Resources */,
@@ -242,9 +260,11 @@
 				C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */,
 				C3A634D52C64E51D00EF8C9C /* HomeViewModel.swift in Sources */,
 				C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */,
+				C36A2E682C6652F000C2A4FB /* HomeViewController+TableView.swift in Sources */,
 				C333E0252C60E0E60055CB36 /* LoginViewController.swift in Sources */,
 				C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */,
 				C333E0212C60E0E60055CB36 /* AppDelegate.swift in Sources */,
+				C36A2E662C664FCC00C2A4FB /* OrderTableViewCell.swift in Sources */,
 				C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */,
 				C3A634CE2C64DBCD00EF8C9C /* User.swift in Sources */,
 				C333E0232C60E0E60055CB36 /* SceneDelegate.swift in Sources */,

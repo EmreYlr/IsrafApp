@@ -304,11 +304,26 @@
                     <view key="view" contentMode="scaleToFill" id="2xc-A1-fWj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q7u-3z-fuz">
+                                <rect key="frame" x="20" y="123" width="353" height="646"/>
+                                <color key="backgroundColor" name="BGColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="l5F-Fl-9cW"/>
                         <color key="backgroundColor" name="BGColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="q7u-3z-fuz" secondAttribute="trailing" constant="20" id="Dra-9l-UIh"/>
+                            <constraint firstItem="q7u-3z-fuz" firstAttribute="leading" secondItem="l5F-Fl-9cW" secondAttribute="leading" constant="20" id="ieT-vu-lkH"/>
+                            <constraint firstItem="q7u-3z-fuz" firstAttribute="top" secondItem="l5F-Fl-9cW" secondAttribute="top" constant="20" id="nSw-qu-Aai"/>
+                            <constraint firstItem="q7u-3z-fuz" firstAttribute="bottom" secondItem="l5F-Fl-9cW" secondAttribute="bottom" id="ryP-HU-7dk"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" id="raS-nH-kfa"/>
                     <navigationItem key="navigationItem" title="Home Screen" id="qvJ-Ey-2tf"/>
+                    <connections>
+                        <outlet property="tableView" destination="q7u-3z-fuz" id="fad-90-ldx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PL-md-mgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,6 +405,7 @@
                 <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="ePA-PB-xeq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yps-SZ-AQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="TextWhiteColor"/>
                         <color key="barTintColor" name="TextWhiteColor"/>
@@ -408,8 +424,8 @@
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Logo" width="942" height="710"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="person.crop.circle" catalog="system" width="32" height="32"/>
         <namedColor name="BGColor">
             <color red="0.99599999189376831" green="0.98000001907348633" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
