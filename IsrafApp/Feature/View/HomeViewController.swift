@@ -17,7 +17,6 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        
         print(homeViewModel.uid)
     }
     

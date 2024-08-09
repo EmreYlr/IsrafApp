@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,40 +28,48 @@
                         <rect key="frame" x="10" y="155" width="300" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05m-HX-cYU">
-                                <rect key="frame" x="7.9999999999999964" y="0.0" width="58.666666666666657" height="14.333333333333334"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="8.0000000000000036" y="5.0000000000000009" width="62.333333333333343" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-5z-wCM">
-                                <rect key="frame" x="257.33333333333331" y="27" width="34.666666666666686" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="252.33333333333329" y="25.666666666666657" width="39.666666666666657" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" name="ButtonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSJ-bH-wVr">
-                                <rect key="frame" x="275" y="0.0" width="17" height="14.333333333333334"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="273.33333333333331" y="5.0000000000000009" width="18.666666666666686" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="companyName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tm-YW-END">
                                 <rect key="frame" x="8" y="33" width="71.666666666666671" height="12"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-jJ-Zvk">
+                                <rect key="frame" x="200" y="31.666666666666654" width="46.333333333333343" height="13.333333333333339"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="CutColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1Tm-YW-END" secondAttribute="bottom" constant="5" id="5iw-gU-Ics"/>
+                            <constraint firstAttribute="bottom" secondItem="WsG-jJ-Zvk" secondAttribute="bottom" constant="5" id="DvU-eo-Hrt"/>
+                            <constraint firstItem="EcR-5z-wCM" firstAttribute="leading" secondItem="WsG-jJ-Zvk" secondAttribute="trailing" constant="6" id="FQ2-Nr-2v5"/>
                             <constraint firstItem="05m-HX-cYU" firstAttribute="leading" secondItem="4qP-X3-YIQ" secondAttribute="leading" constant="8" id="Ykc-Xc-xjL"/>
                             <constraint firstAttribute="trailing" secondItem="EcR-5z-wCM" secondAttribute="trailing" constant="8" id="a6x-aV-jFh"/>
                             <constraint firstAttribute="bottom" secondItem="EcR-5z-wCM" secondAttribute="bottom" constant="5" id="hfg-nz-Dng"/>
-                            <constraint firstItem="fSJ-bH-wVr" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" id="q6o-CJ-l8q"/>
+                            <constraint firstItem="fSJ-bH-wVr" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" constant="5" id="q6o-CJ-l8q"/>
                             <constraint firstAttribute="trailing" secondItem="fSJ-bH-wVr" secondAttribute="trailing" constant="8" id="sYp-w3-dI4"/>
                             <constraint firstItem="1Tm-YW-END" firstAttribute="leading" secondItem="4qP-X3-YIQ" secondAttribute="leading" constant="8" id="tFb-MS-WKx"/>
-                            <constraint firstItem="05m-HX-cYU" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" id="y2a-0k-oO8"/>
+                            <constraint firstItem="05m-HX-cYU" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" constant="5" id="y2a-0k-oO8"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -80,12 +89,19 @@
                 <outlet property="distanceLabel" destination="fSJ-bH-wVr" id="kI0-1l-AH9"/>
                 <outlet property="foodImageView" destination="61Q-1f-zzN" id="JSA-RC-pek"/>
                 <outlet property="foodNameLabel" destination="05m-HX-cYU" id="vs4-MY-JHj"/>
+                <outlet property="oldPriceLabel" destination="WsG-jJ-Zvk" id="XKm-07-kZc"/>
                 <outlet property="priceLabel" destination="EcR-5z-wCM" id="8av-Wy-9Ck"/>
             </connections>
             <point key="canvasLocation" x="140.45801526717557" y="18.30985915492958"/>
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="ButtonColor">
+            <color red="0.32199999690055847" green="0.41999998688697815" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CutColor">
+            <color red="0.86699998378753662" green="0.21199999749660492" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

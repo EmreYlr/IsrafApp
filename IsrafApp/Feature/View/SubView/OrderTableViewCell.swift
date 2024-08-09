@@ -14,6 +14,7 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var oldPriceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
