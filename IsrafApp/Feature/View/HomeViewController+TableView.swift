@@ -37,18 +37,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.foodImageView.image = UIImage(named: "food")
-        cell.foodNameLabel.text = "Burger"
-        cell.distanceLabel.text = "10 KM"
-        cell.companyNameLabel.text = "Burger King"
-        cell.priceLabel.text = "100 TL"
-        
-        let attributedString = NSMutableAttributedString(string: "150 TL")
-        attributedString.addAttribute(.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
-        
-        cell.oldPriceLabel.attributedText = attributedString
-        cell.foodImageView.layer.cornerRadius = 18
-        cell.foodImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        cell.foodImageView.layer.masksToBounds = true
+        cell.mainCellConfiguration(with: "Burger", with: "10 KM", with: "Burger King", with: "150 TL", with: "150 TL")
         return cell
     }
 }

@@ -25,34 +25,34 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qP-X3-YIQ">
-                        <rect key="frame" x="10" y="155" width="300" height="50"/>
+                        <rect key="frame" x="0.0" y="150" width="320" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05m-HX-cYU">
-                                <rect key="frame" x="8.0000000000000036" y="5.0000000000000009" width="62.333333333333343" height="14.333333333333336"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="8" y="10" width="71.333333333333329" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" name="TextBlackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-5z-wCM">
-                                <rect key="frame" x="252.33333333333329" y="25.666666666666657" width="39.666666666666657" height="19.333333333333329"/>
+                                <rect key="frame" x="272.33333333333331" y="30.666666666666657" width="39.666666666666686" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" name="ButtonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSJ-bH-wVr">
-                                <rect key="frame" x="273.33333333333331" y="5.0000000000000009" width="18.666666666666686" height="14.333333333333336"/>
+                                <rect key="frame" x="293.33333333333331" y="10" width="18.666666666666686" height="14.333333333333336"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="TextBlackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="companyName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tm-YW-END">
-                                <rect key="frame" x="8" y="33" width="71.666666666666671" height="12"/>
+                                <rect key="frame" x="8" y="38" width="71.666666666666671" height="12"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="SecondTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-jJ-Zvk">
-                                <rect key="frame" x="200" y="31.666666666666654" width="46.333333333333343" height="13.333333333333339"/>
+                                <rect key="frame" x="220" y="36.666666666666657" width="46.333333333333314" height="13.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" name="CutColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,31 +60,33 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="1Tm-YW-END" secondAttribute="bottom" constant="5" id="5iw-gU-Ics"/>
-                            <constraint firstAttribute="bottom" secondItem="WsG-jJ-Zvk" secondAttribute="bottom" constant="5" id="DvU-eo-Hrt"/>
+                            <constraint firstAttribute="bottom" secondItem="1Tm-YW-END" secondAttribute="bottom" constant="10" id="5iw-gU-Ics"/>
+                            <constraint firstAttribute="bottom" secondItem="WsG-jJ-Zvk" secondAttribute="bottom" constant="10" id="DvU-eo-Hrt"/>
                             <constraint firstItem="EcR-5z-wCM" firstAttribute="leading" secondItem="WsG-jJ-Zvk" secondAttribute="trailing" constant="6" id="FQ2-Nr-2v5"/>
                             <constraint firstItem="05m-HX-cYU" firstAttribute="leading" secondItem="4qP-X3-YIQ" secondAttribute="leading" constant="8" id="Ykc-Xc-xjL"/>
                             <constraint firstAttribute="trailing" secondItem="EcR-5z-wCM" secondAttribute="trailing" constant="8" id="a6x-aV-jFh"/>
-                            <constraint firstAttribute="bottom" secondItem="EcR-5z-wCM" secondAttribute="bottom" constant="5" id="hfg-nz-Dng"/>
-                            <constraint firstItem="fSJ-bH-wVr" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" constant="5" id="q6o-CJ-l8q"/>
+                            <constraint firstAttribute="bottom" secondItem="EcR-5z-wCM" secondAttribute="bottom" constant="10" id="hfg-nz-Dng"/>
+                            <constraint firstItem="fSJ-bH-wVr" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" constant="10" id="q6o-CJ-l8q"/>
                             <constraint firstAttribute="trailing" secondItem="fSJ-bH-wVr" secondAttribute="trailing" constant="8" id="sYp-w3-dI4"/>
                             <constraint firstItem="1Tm-YW-END" firstAttribute="leading" secondItem="4qP-X3-YIQ" secondAttribute="leading" constant="8" id="tFb-MS-WKx"/>
-                            <constraint firstItem="05m-HX-cYU" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" constant="5" id="y2a-0k-oO8"/>
+                            <constraint firstItem="05m-HX-cYU" firstAttribute="top" secondItem="4qP-X3-YIQ" secondAttribute="top" constant="10" id="y2a-0k-oO8"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4qP-X3-YIQ" firstAttribute="top" secondItem="61Q-1f-zzN" secondAttribute="bottom" constant="5" id="9QN-vJ-Isz"/>
+                    <constraint firstItem="4qP-X3-YIQ" firstAttribute="top" secondItem="61Q-1f-zzN" secondAttribute="bottom" id="9QN-vJ-Isz"/>
                     <constraint firstItem="61Q-1f-zzN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BZK-3D-H6X"/>
-                    <constraint firstAttribute="trailing" secondItem="4qP-X3-YIQ" secondAttribute="trailing" constant="10" id="JXu-fg-I5t"/>
-                    <constraint firstAttribute="bottom" secondItem="4qP-X3-YIQ" secondAttribute="bottom" constant="5" id="Weg-JU-HtG"/>
+                    <constraint firstAttribute="trailing" secondItem="4qP-X3-YIQ" secondAttribute="trailing" id="JXu-fg-I5t"/>
+                    <constraint firstAttribute="bottom" secondItem="4qP-X3-YIQ" secondAttribute="bottom" id="Weg-JU-HtG"/>
                     <constraint firstAttribute="trailing" secondItem="61Q-1f-zzN" secondAttribute="trailing" id="bdd-bz-fmH"/>
-                    <constraint firstItem="4qP-X3-YIQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lDc-is-U0l"/>
+                    <constraint firstItem="4qP-X3-YIQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lDc-is-U0l"/>
                     <constraint firstItem="61Q-1f-zzN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rWB-4Y-XHc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="BGColor"/>
             <connections>
+                <outlet property="bottomView" destination="4qP-X3-YIQ" id="9QQ-jB-e9N"/>
                 <outlet property="companyNameLabel" destination="1Tm-YW-END" id="pPy-z3-hiO"/>
                 <outlet property="distanceLabel" destination="fSJ-bH-wVr" id="kI0-1l-AH9"/>
                 <outlet property="foodImageView" destination="61Q-1f-zzN" id="JSA-RC-pek"/>
@@ -96,11 +98,20 @@
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="BGColor">
+            <color red="0.99599999189376831" green="0.98000001907348633" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="ButtonColor">
             <color red="0.32199999690055847" green="0.41999998688697815" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CutColor">
             <color red="0.86699998378753662" green="0.21199999749660492" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondTextColor">
+            <color red="0.46700000762939453" green="0.46700000762939453" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextBlackColor">
+            <color red="0.2199999988079071" green="0.21600000560283661" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
