@@ -9,18 +9,21 @@ import Foundation
 
 protocol LoginViewModelProtocol {
     var delegate: LoginViewModelOutputProtocol? { get set }
+    var user: User? { get set }
     func loginUser(email: String, password: String)
+    func fetchUser(uid: String)
 }
 
 protocol LoginViewModelOutputProtocol: AnyObject {
     func startLoading()
     func stopLoading()
-    func update(uid: String)
+    func update()
     func error(error: Error)
 }
 
 final class LoginViewModel {
     weak var delegate: LoginViewModelOutputProtocol?
+    var user: User? = User(data: [:])
     
     func loginUser(email: String, password: String) {
         if email.isEmpty || password.isEmpty {
@@ -32,13 +35,28 @@ final class LoginViewModel {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let authData):
-                    self.delegate?.update(uid: authData.user.uid)
+                    self.fetchUser(uid: authData.user.uid)
                 case .failure(let error):
                     self.delegate?.error(error: error)
                 }
                 self.delegate?.stopLoading()
             }
         }
+    }
+    
+    func fetchUser(uid: String) {
+        NetworkManager.shared.getUserInfo(uid: uid) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let user):
+                    self.user = user
+                    self.delegate?.update()
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        
     }
 }
 extension LoginViewModel: LoginViewModelProtocol {}

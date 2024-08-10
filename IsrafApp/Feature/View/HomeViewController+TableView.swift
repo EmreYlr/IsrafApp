@@ -37,7 +37,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.foodImageView.image = UIImage(named: "food")
-        cell.mainCellConfiguration(with: "Burger", with: "10 KM", with: "Burger King", with: "150 TL", with: "150 TL")
+        cell.mainCellConfiguration(with: "Burger", with: "10 KM", with: "Burger King", with: "100 TL", with: "150 TL")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

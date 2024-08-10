@@ -327,7 +327,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PL-md-mgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3028" y="37"/>
+            <point key="canvasLocation" x="3027" y="-625"/>
+        </scene>
+        <!--Detail Screen-->
+        <scene sceneID="vif-m3-LW5">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="XHj-Z3-JsN" customClass="DetailViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QZg-wu-Lqt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="G15-im-WKQ"/>
+                        <color key="backgroundColor" name="BGColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail Screen" id="0cG-bc-ke1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnj-ZU-Tty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3941" y="-625"/>
         </scene>
         <!--Profil-->
         <scene sceneID="9Gr-87-uw3">
@@ -346,9 +362,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9r3-wM-BgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2111" y="775"/>
+            <point key="canvasLocation" x="2111" y="701"/>
         </scene>
-        <!--Profile-->
+        <!--Profile Screen-->
         <scene sceneID="55v-Po-1XK">
             <objects>
                 <viewController id="NZG-mk-OsP" sceneMemberID="viewController">
@@ -358,11 +374,44 @@
                         <viewLayoutGuide key="safeArea" id="SDe-qJ-g8m"/>
                         <color key="backgroundColor" name="BGColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Xs0-Ar-X9C"/>
+                    <navigationItem key="navigationItem" title="Profile Screen" id="Xs0-Ar-X9C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuR-L5-8J3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3027" y="775"/>
+            <point key="canvasLocation" x="3027" y="701"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="b9W-dN-yXd">
+            <objects>
+                <navigationController id="jOf-AS-rGA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="aK8-Ko-bK2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tvw-rH-Rg9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aUg-GW-oHQ" kind="relationship" relationship="rootViewController" id="ydD-ne-CEZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mln-tj-0ec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111" y="37"/>
+        </scene>
+        <!--Map Screen-->
+        <scene sceneID="L7g-OO-NdR">
+            <objects>
+                <viewController id="aUg-GW-oHQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8CV-Go-IAq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uc2-lT-WTq"/>
+                        <color key="backgroundColor" name="BGColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map Screen" id="eIW-cT-0JS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdT-hZ-a8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3027" y="37"/>
         </scene>
         <!--Ana Sayfa-->
         <scene sceneID="1nQ-bz-QYo">
@@ -379,7 +428,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2x-0L-qML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2111" y="37"/>
+            <point key="canvasLocation" x="2111" y="-625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TJD-e4-bdC">
@@ -413,7 +462,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="IBA-Fv-O7b" kind="relationship" relationship="viewControllers" id="uts-rW-To1"/>
-                        <segue destination="cCu-8T-otf" kind="relationship" relationship="viewControllers" id="Go0-xe-mdN"/>
+                        <segue destination="jOf-AS-rGA" kind="relationship" relationship="viewControllers" id="88L-GF-5K5"/>
+                        <segue destination="cCu-8T-otf" kind="relationship" relationship="viewControllers" id="z5j-lG-Cgw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh8-ir-Lss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -424,8 +474,9 @@
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Logo" width="942" height="710"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
-        <image name="person.crop.circle" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <namedColor name="BGColor">
             <color red="0.99599999189376831" green="0.98000001907348633" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

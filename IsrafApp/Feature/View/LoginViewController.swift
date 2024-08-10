@@ -55,16 +55,16 @@ extension LoginViewController: LoginViewModelOutputProtocol {
         loadIndicator.isHidden = true
     }
     
-    func update(uid: String) {
+    func update() {
+        
         print("Giriş Başarılı")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-        if let viewControllers = tabBarController.viewControllers {
-            for viewController in viewControllers {
-                if let homeVC = viewController as? HomeViewController {
-                    homeVC.homeViewModel.uid = uid
-                }
-            }
+        
+        if let homeVC = (tabBarController.viewControllers?
+            .compactMap { ($0 as? UINavigationController)?.viewControllers.first(where: { $0 is HomeViewController }) }
+            .first as? HomeViewController) {
+            homeVC.homeViewModel.user = loginViewModel.user
         }
         navigationController?.navigationBar.isHidden = true
         navigationController?.setViewControllers([tabBarController], animated: true)
