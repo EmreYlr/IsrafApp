@@ -34,5 +34,5 @@ final class HomeViewController: UIViewController {
 
 }
 extension HomeViewController: HomeViewModelOutputProtocol {
-    
+        
 }
