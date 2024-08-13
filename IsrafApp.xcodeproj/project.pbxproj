@@ -25,6 +25,7 @@
 		C36A2E652C664FCC00C2A4FB /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36A2E642C664FCC00C2A4FB /* OrderTableViewCell.xib */; };
 		C36A2E662C664FCC00C2A4FB /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2E632C664FCC00C2A4FB /* OrderTableViewCell.swift */; };
 		C36A2E682C6652F000C2A4FB /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2E672C6652F000C2A4FB /* HomeViewController+TableView.swift */; };
+		C38D34FE2C6BC202001D17E2 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38D34FD2C6BC202001D17E2 /* Food.swift */; };
 		C3A634CE2C64DBCD00EF8C9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634CD2C64DBCD00EF8C9C /* User.swift */; };
 		C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */; };
 		C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */; };
@@ -50,6 +51,7 @@
 		C36A2E632C664FCC00C2A4FB /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		C36A2E642C664FCC00C2A4FB /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		C36A2E672C6652F000C2A4FB /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		C38D34FD2C6BC202001D17E2 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		C3A634CD2C64DBCD00EF8C9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A634CD2C64DBCD00EF8C9C /* User.swift */,
+				C38D34FD2C6BC202001D17E2 /* Food.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				C333E0232C60E0E60055CB36 /* SceneDelegate.swift in Sources */,
 				C333E03F2C60FDCA0055CB36 /* LoginViewModel.swift in Sources */,
 				C333E03B2C60FD8B0055CB36 /* RegisterViewController.swift in Sources */,
+				C38D34FE2C6BC202001D17E2 /* Food.swift in Sources */,
 				C3E59C932C67ACBF001600CD /* DetailViewModel.swift in Sources */,
 				C3E59C912C67ACA7001600CD /* DetailViewController.swift in Sources */,
 			);

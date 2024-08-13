@@ -15,7 +15,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return homeViewModel.foods.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -36,8 +36,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? OrderTableViewCell else {
             return UITableViewCell()
         }
+        let food = homeViewModel.foods[indexPath.section]
         cell.foodImageView.image = UIImage(named: "food")
-        cell.mainCellConfiguration(with: "Burger", with: "10 KM", with: "Burger King", with: "100 TL", with: "150 TL")
+        cell.mainCellConfiguration(with: food.foodName, with: food.distance, with: food.companyName, with: food.newPrice, with: food.oldPrice)
         return cell
     }
     

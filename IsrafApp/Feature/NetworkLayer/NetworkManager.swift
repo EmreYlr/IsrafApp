@@ -70,4 +70,25 @@ final class NetworkManager {
         }
     }
     
+    func fetchFoods(completion: @escaping ([Food]?) -> Void) {
+        db.collection("foods").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error fetching documents: \(error)")
+                completion(nil)
+            } else {
+                var foods = [Food]()
+                for document in snapshot!.documents {
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: document.data(), options: [])
+                        let food = try JSONDecoder().decode(Food.self, from: jsonData)
+                        foods.append(food)
+                    } catch let error {
+                        print("Error decoding document: \(error)")
+                    }
+                }
+                completion(foods)
+            }
+        }
+    }
+    
 }

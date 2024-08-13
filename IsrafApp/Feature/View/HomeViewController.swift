@@ -29,10 +29,19 @@ final class HomeViewController: UIViewController {
         tableView.dataSource = self
         homeViewModel.delegate = self
         tableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        homeViewModel.fetchFoods()
     }
     
 
 }
 extension HomeViewController: HomeViewModelOutputProtocol {
+    func update() {
+        tableView.reloadData()
+    }
+    
+    func error() {
+        print("error")
+    }
+    
         
 }
