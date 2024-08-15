@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import Kingfisher
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     //MARK: -Variables
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -32,7 +32,6 @@ class DetailViewController: UIViewController {
         detailSetting()
         detailViewModel.mapSettings(mapView: mapView)
     }
-    
     
     func detailSetting() {
         guard let food = detailViewModel.food else {

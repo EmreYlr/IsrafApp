@@ -11,17 +11,7 @@ final class HomeViewController: UIViewController {
     //MARK: -Variables
     @IBOutlet weak var tableView: UITableView!
     
-    var homeViewModel: HomeViewModelProtocol
-    
-    init(viewModel: HomeViewModelProtocol) {
-        self.homeViewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        self.homeViewModel = HomeViewModel()
-        super.init(coder: coder)
-    }
+    var homeViewModel: HomeViewModelProtocol = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

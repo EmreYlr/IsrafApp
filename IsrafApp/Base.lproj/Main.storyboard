@@ -360,9 +360,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYN-Ai-sJE">
-                                <rect key="frame" x="16" y="719" width="72" height="49"/>
+                                <rect key="frame" x="16" y="719" width="85" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="u0C-uA-LrR"/>
+                                    <constraint firstAttribute="width" constant="85" id="u0C-uA-LrR"/>
                                     <constraint firstAttribute="height" constant="49" id="vMx-cz-VaM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
@@ -370,7 +370,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldPrice" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-ta-kQ9">
-                                <rect key="frame" x="96" y="719" width="70" height="49"/>
+                                <rect key="frame" x="109" y="719" width="70" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="b7e-9n-9hz"/>
                                 </constraints>
@@ -379,7 +379,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVs-Sp-g5d">
-                                <rect key="frame" x="191" y="719" width="185" height="49"/>
+                                <rect key="frame" x="204" y="719" width="172" height="49"/>
                                 <color key="backgroundColor" name="ButtonColor"/>
                                 <color key="tintColor" name="TextWhiteColor"/>
                                 <state key="normal" title="Button"/>
@@ -487,11 +487,11 @@
             </objects>
             <point key="canvasLocation" x="3027" y="701"/>
         </scene>
-        <!--Map-->
+        <!--Harita-->
         <scene sceneID="b9W-dN-yXd">
             <objects>
                 <navigationController id="jOf-AS-rGA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="aK8-Ko-bK2"/>
+                    <tabBarItem key="tabBarItem" title="Harita" image="map" catalog="system" id="aK8-Ko-bK2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tvw-rH-Rg9">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -507,14 +507,29 @@
         <!--Map Screen-->
         <scene sceneID="L7g-OO-NdR">
             <objects>
-                <viewController id="aUg-GW-oHQ" sceneMemberID="viewController">
+                <viewController id="aUg-GW-oHQ" customClass="MapViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8CV-Go-IAq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bB0-HI-3QD">
+                                <rect key="frame" x="15" y="118" width="363" height="636"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uc2-lT-WTq"/>
                         <color key="backgroundColor" name="BGColor"/>
+                        <constraints>
+                            <constraint firstItem="bB0-HI-3QD" firstAttribute="top" secondItem="uc2-lT-WTq" secondAttribute="top" constant="15" id="5MN-Pp-2LC"/>
+                            <constraint firstItem="uc2-lT-WTq" firstAttribute="trailing" secondItem="bB0-HI-3QD" secondAttribute="trailing" constant="15" id="d08-xb-Zjq"/>
+                            <constraint firstItem="uc2-lT-WTq" firstAttribute="bottom" secondItem="bB0-HI-3QD" secondAttribute="bottom" constant="15" id="qpM-8a-e2U"/>
+                            <constraint firstItem="bB0-HI-3QD" firstAttribute="leading" secondItem="uc2-lT-WTq" secondAttribute="leading" constant="15" id="yGA-mH-dkW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map Screen" id="eIW-cT-0JS"/>
+                    <connections>
+                        <outlet property="mapView" destination="bB0-HI-3QD" id="im2-Ua-3as"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdT-hZ-a8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
