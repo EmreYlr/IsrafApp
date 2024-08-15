@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class OrderTableViewCell: UITableViewCell {
     
@@ -29,7 +30,8 @@ final class OrderTableViewCell: UITableViewCell {
         foodImageView.layer.masksToBounds = true
     }
 
-    func mainCellConfiguration(with foodName: String, with distance: String, with companyName: String, with price: String, with oldPrice: String) {
+    func mainCellConfiguration(with foodName: String, with distance: String, with companyName: String, with price: String, with oldPrice: String, with url: String) {
+        foodImageView.kf.setImage(with: URL(string: url))
         foodNameLabel.text = foodName
         distanceLabel.text = distance
         companyNameLabel.text = companyName

@@ -33,14 +33,14 @@ class DetailViewController: UIViewController {
     
     func detailSetting() {
         guard let food = detailViewModel.food else {
-            //TODO: -ADD ALERT
+            showAlert(title: "Hata", message: "Ürün bilgileri alınamadı.")
             return
         }
         productImageView.kf.setImage(with: URL(string: food.imageURL))
-        productNameLabel.text = food.foodName
-        companyNameLabel.text = food.companyName
-        distanceLabel.text = food.distance
-        priceLabel.text = food.newPrice
+        productNameLabel.text = "YEMEK: \(food.foodName)"
+        companyNameLabel.text = "LOKANTA: \(food.companyName)"
+        distanceLabel.text = "MESAFE: \(food.distance)"
+        priceLabel.text = food.newPrice == "0 TL" ? "BEDAVA" : food.newPrice
         
         let attributedString = NSMutableAttributedString(string: food.oldPrice)
         attributedString.addAttribute(.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
@@ -58,6 +58,5 @@ class DetailViewController: UIViewController {
     }
  
     
-    @IBAction func buyButtonClicked(_ sender: Any) {
-    }
+    @IBAction func buyButtonClicked(_ sender: Any) {}
 }

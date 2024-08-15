@@ -38,8 +38,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let food = homeViewModel.foods[indexPath.section]
-        cell.foodImageView.kf.setImage(with: URL(string: food.imageURL))
-        cell.mainCellConfiguration(with: food.foodName, with: food.distance, with: food.companyName, with: food.newPrice, with: food.oldPrice)
+        cell.mainCellConfiguration(with: food.foodName, with: food.distance, with: food.companyName, with: food.newPrice, with: food.oldPrice, with: food.imageURL)
         return cell
     }
     
