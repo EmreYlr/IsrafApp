@@ -22,12 +22,15 @@ class DetailViewController: UIViewController {
     
     var detailViewModel: DetailViewModelProtocol = DetailViewModel()
     
+    //MARK: -FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DetailViewController")
+        mapView.delegate = self
         productImageView.layer.cornerRadius = 18
         buyButton.layer.cornerRadius = 8
         detailSetting()
+        detailViewModel.mapSettings(mapView: mapView)
     }
     
     
@@ -45,17 +48,8 @@ class DetailViewController: UIViewController {
         let attributedString = NSMutableAttributedString(string: food.oldPrice)
         attributedString.addAttribute(.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
         oldPriceLabel.attributedText = attributedString
-        mapSettings(food: food)
     }
-    
-    func mapSettings(food: Food){
-        let location = CLLocationCoordinate2D(latitude: Double(food.lat)!, longitude: Double(food.long)!)
-        let region = MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        mapView.setRegion(region, animated: true)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        mapView.addAnnotation(annotation)
-    }
+
  
     
     @IBAction func buyButtonClicked(_ sender: Any) {}
