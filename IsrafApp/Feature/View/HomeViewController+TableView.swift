@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -37,7 +38,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let food = homeViewModel.foods[indexPath.section]
-        cell.foodImageView.image = UIImage(named: "food")
+        cell.foodImageView.kf.setImage(with: URL(string: food.imageURL))
         cell.mainCellConfiguration(with: food.foodName, with: food.distance, with: food.companyName, with: food.newPrice, with: food.oldPrice)
         return cell
     }
@@ -45,6 +46,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.detailViewModel.food = homeViewModel.foods[indexPath.section]
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }

@@ -17,4 +17,5 @@ struct Food: Codable {
     let newPrice: String
     let oldPrice: String
     let telNo: String
+    let imageURL: String
 }
