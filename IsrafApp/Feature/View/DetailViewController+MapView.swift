@@ -17,7 +17,7 @@ extension DetailViewController: MKMapViewDelegate {
         alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: { _ in
             let placemark = MKPlacemark(coordinate: coordinate)
             let mapItem = MKMapItem(placemark: placemark)
-            mapItem.name = "Selected Location"
+            mapItem.name = self.detailViewModel.food?.companyName
             
             let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
             mapItem.openInMaps(launchOptions: launchOptions)
