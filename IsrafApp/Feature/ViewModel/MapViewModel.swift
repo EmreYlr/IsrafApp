@@ -24,14 +24,21 @@ final class MapViewModel {
     weak var delegate: MapViewModelOutputProtocol?
     var foods: [Food] = []
     func fetchFoods() {
-        NetworkManager.shared.fetchFoods { [weak self] foods in
-            guard let self = self, let foods = foods else {
-                self?.delegate?.error()
-                return
-            }
-            self.foods = foods
-            DispatchQueue.main.async {
-                self.delegate?.update()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            NetworkManager.shared.fetchFoods { [weak self] foods in
+                guard let self = self else {
+                    return
+                }
+                if let foods = foods {
+                    self.foods = foods
+                    DispatchQueue.main.async {
+                        self.delegate?.update()
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.delegate?.error()
+                    }
+                }
             }
         }
     }

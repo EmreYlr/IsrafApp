@@ -14,24 +14,20 @@ final class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var mapViewModel: MapViewModelProtocol = MapViewModel()
     let locationManager = CLLocationManager()
+    var selectedAnnotation: MKAnnotation?
+
     
     //MARK: -Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MapViewController")
         setupInit()
-        
-        let status = locationManager.authorizationStatus
-        if status == .authorizedWhenInUse || status == .authorizedAlways {
-            startUpdatingLocation()
-        } else {
-            showAlert(title: "Konum İzni", message: "Konum izni verilmedi")
-        }
-        
+
     }
     
     func setupInit() {
         mapViewModel.delegate = self
+        mapView.delegate = self
         mapViewModel.fetchFoods()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -39,6 +35,12 @@ final class MapViewController: UIViewController {
             self?.locationManager.requestWhenInUseAuthorization()
         }
         
+        let status = locationManager.authorizationStatus
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            startUpdatingLocation()
+        } else {
+            showAlert(title: "Konum İzni", message: "Konum izni verilmedi")
+        }
     }
     
     func startUpdatingLocation() {
@@ -47,6 +49,22 @@ final class MapViewController: UIViewController {
         }
         locationManager.startUpdatingLocation()
     }
+    
+
+    func openMapsForDirections(to coordinate: CLLocationCoordinate2D, title: String?) {
+        let placemark = MKPlacemark(coordinate: coordinate)
+        let mapItem = MKMapItem(placemark: placemark)
+        
+        mapItem.name = title ?? "Hedef Konum"
+        DispatchQueue.main.async {
+            mapItem.openInMaps(launchOptions: [
+                MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+            ])
+        }
+        
+    }
+
+
     
 }
 //MARK: -MapViewModelOutputProtocol
