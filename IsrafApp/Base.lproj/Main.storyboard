@@ -474,14 +474,35 @@
         <!--Profile Screen-->
         <scene sceneID="55v-Po-1XK">
             <objects>
-                <viewController id="NZG-mk-OsP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="NZG-mk-OsP" customClass="ProfileViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NI9-1c-NmM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDI-46-2G8">
+                                <rect key="frame" x="150" y="409" width="93.333333333333314" height="34.333333333333314"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <color key="tintColor" name="TextWhiteColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Çıkış Yap"/>
+                                <connections>
+                                    <action selector="buyButtonClicked:" destination="XHj-Z3-JsN" eventType="touchUpInside" id="dFm-FP-Mf8"/>
+                                    <action selector="loginButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuz-Yd-b9x"/>
+                                    <action selector="logoutButtonClicked:" destination="NZG-mk-OsP" eventType="touchUpInside" id="rM4-xn-caw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SDe-qJ-g8m"/>
                         <color key="backgroundColor" name="BGColor"/>
+                        <constraints>
+                            <constraint firstItem="uDI-46-2G8" firstAttribute="centerY" secondItem="NI9-1c-NmM" secondAttribute="centerY" id="W5L-GF-zaq"/>
+                            <constraint firstItem="uDI-46-2G8" firstAttribute="centerX" secondItem="NI9-1c-NmM" secondAttribute="centerX" id="q80-8G-sRD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile Screen" id="Xs0-Ar-X9C"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="uDI-46-2G8" id="YDo-ti-Zmu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TuR-L5-8J3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
