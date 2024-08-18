@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import MapKit
 
 protocol MapViewModelProtocol {
     var delegate: MapViewModelOutputProtocol? { get set }
     var foods: [Food] { get set }
     func fetchFoods()
+    func foodSetup(mapView: MKMapView)
 }
 
 protocol MapViewModelOutputProtocol: AnyObject {
@@ -30,6 +32,20 @@ final class MapViewModel {
             self.foods = foods
             DispatchQueue.main.async {
                 self.delegate?.update()
+            }
+        }
+    }
+    
+    func foodSetup(mapView: MKMapView) {
+        mapView.removeAnnotations(mapView.annotations)
+        for food in foods {
+            if let latitude = Double(food.lat), let longitude = Double(food.long) {
+                let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = location
+                annotation.title = food.companyName
+                annotation.subtitle = food.foodName
+                mapView.addAnnotation(annotation)
             }
         }
     }

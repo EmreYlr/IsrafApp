@@ -33,6 +33,7 @@
 		C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */; };
 		C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */; };
 		C3A634D52C64E51D00EF8C9C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A634D42C64E51D00EF8C9C /* HomeViewModel.swift */; };
+		C3BF7C492C721AED0085E41B /* MapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */; };
 		C3D0C5362C6E1C7A0063A5CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C3D0C5352C6E1C7A0063A5CD /* Kingfisher */; };
 		C3E59C912C67ACA7001600CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E59C902C67ACA7001600CD /* DetailViewController.swift */; };
 		C3E59C932C67ACBF001600CD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E59C922C67ACBF001600CD /* DetailViewModel.swift */; };
@@ -63,6 +64,7 @@
 		C3A634D02C64DE8C00EF8C9C /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C3A634D22C64E50B00EF8C9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C3A634D42C64E51D00EF8C9C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapView.swift"; sourceTree = "<group>"; };
 		C3E59C902C67ACA7001600CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C3E59C922C67ACBF001600CD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 				C3E59C902C67ACA7001600CD /* DetailViewController.swift */,
 				C335DFEB2C6E290C008E74B5 /* DetailViewController+MapView.swift */,
 				C335DFED2C6E2BA5008E74B5 /* MapViewController.swift */,
+				C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				C333E0252C60E0E60055CB36 /* LoginViewController.swift in Sources */,
 				C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */,
 				C333E0212C60E0E60055CB36 /* AppDelegate.swift in Sources */,
+				C3BF7C492C721AED0085E41B /* MapViewController+MapView.swift in Sources */,
 				C36A2E662C664FCC00C2A4FB /* OrderTableViewCell.swift in Sources */,
 				C3A634D32C64E50B00EF8C9C /* HomeViewController.swift in Sources */,
 				C3A634CE2C64DBCD00EF8C9C /* User.swift in Sources */,
