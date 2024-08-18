@@ -51,5 +51,9 @@ final class DetailViewController: UIViewController {
 
  
     
-    @IBAction func buyButtonClicked(_ sender: Any) {}
+    @IBAction func buyButtonClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let paymentVC = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        navigationController?.pushViewController(paymentVC, animated: true)
+    }
 }

@@ -452,6 +452,21 @@
             </objects>
             <point key="canvasLocation" x="3939.6946564885493" y="-625.35211267605632"/>
         </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="IIm-cZ-6Tu">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" id="UeI-BQ-qWC" customClass="PaymentViewController" customModule="IsrafApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4f7-nH-yIA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ifo-OM-85L"/>
+                        <color key="backgroundColor" name="BGColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgt-xS-WqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4770" y="-625"/>
+        </scene>
         <!--Profil-->
         <scene sceneID="9Gr-87-uw3">
             <objects>

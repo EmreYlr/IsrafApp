@@ -36,6 +36,8 @@
 		C3BF7C492C721AED0085E41B /* MapViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */; };
 		C3BF7C4B2C7257FD0085E41B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF7C4A2C7257FD0085E41B /* ProfileViewController.swift */; };
 		C3BF7C4D2C7258090085E41B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF7C4C2C7258090085E41B /* ProfileViewModel.swift */; };
+		C3BF7C4F2C725BE50085E41B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF7C4E2C725BE50085E41B /* PaymentViewController.swift */; };
+		C3BF7C512C725C410085E41B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF7C502C725C410085E41B /* PaymentViewModel.swift */; };
 		C3D0C5362C6E1C7A0063A5CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C3D0C5352C6E1C7A0063A5CD /* Kingfisher */; };
 		C3E59C912C67ACA7001600CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E59C902C67ACA7001600CD /* DetailViewController.swift */; };
 		C3E59C932C67ACBF001600CD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E59C922C67ACBF001600CD /* DetailViewModel.swift */; };
@@ -69,6 +71,8 @@
 		C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapView.swift"; sourceTree = "<group>"; };
 		C3BF7C4A2C7257FD0085E41B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C3BF7C4C2C7258090085E41B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C3BF7C4E2C725BE50085E41B /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		C3BF7C502C725C410085E41B /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		C3E59C902C67ACA7001600CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C3E59C922C67ACBF001600CD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 				C3E59C922C67ACBF001600CD /* DetailViewModel.swift */,
 				C335DFEF2C6E2BBD008E74B5 /* MapViewModel.swift */,
 				C3BF7C4C2C7258090085E41B /* ProfileViewModel.swift */,
+				C3BF7C502C725C410085E41B /* PaymentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				C335DFED2C6E2BA5008E74B5 /* MapViewController.swift */,
 				C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */,
 				C3BF7C4A2C7257FD0085E41B /* ProfileViewController.swift */,
+				C3BF7C4E2C725BE50085E41B /* PaymentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 				C335DFEC2C6E290C008E74B5 /* DetailViewController+MapView.swift in Sources */,
 				C38D34FE2C6BC202001D17E2 /* Food.swift in Sources */,
 				C3BF7C4D2C7258090085E41B /* ProfileViewModel.swift in Sources */,
+				C3BF7C512C725C410085E41B /* PaymentViewModel.swift in Sources */,
 				C3BF7C4B2C7257FD0085E41B /* ProfileViewController.swift in Sources */,
 				C3E59C932C67ACBF001600CD /* DetailViewModel.swift in Sources */,
 				C3E59C912C67ACA7001600CD /* DetailViewController.swift in Sources */,
+				C3BF7C4F2C725BE50085E41B /* PaymentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
