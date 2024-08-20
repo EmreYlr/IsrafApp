@@ -10,6 +10,7 @@ import Foundation
 protocol PaymentViewModelProtocol {
     var delegate: PaymentViewModelOutputProtocol? { get set }
     var food: Food? { get set }
+    
 }
 
 protocol PaymentViewModelOutputProtocol: AnyObject {

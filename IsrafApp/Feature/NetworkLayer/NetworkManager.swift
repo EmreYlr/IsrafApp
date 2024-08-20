@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 final class NetworkManager {
     static let shared = NetworkManager()
-    
+    var tempUser: User?
     private init() {}
     
     private let db = Firestore.firestore()
@@ -66,6 +66,7 @@ final class NetworkManager {
                 completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to get user data"])))
                 return
             }
+            self.tempUser = user
             completion(.success(user))
         }
     }

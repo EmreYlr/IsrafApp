@@ -50,7 +50,11 @@ final class PaymentViewController: UIViewController {
         let yesAction = UIAlertAction(title: "Evet", style: UIAlertAction.Style.default) {
                 UIAlertAction in
             self.showAlert(title: "Başarılı", message: "Ödeme işlemi başarılı bir şekilde gerçekleştirildi.")
+            if let homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+            self.navigationController?.setViewControllers([homeViewController], animated: true)
             }
+            
+        }
         let cancelAction = UIAlertAction(title: "İptal", style: UIAlertAction.Style.cancel) {
                 UIAlertAction in
             self.showAlert(title: "İptal", message: "Ödeme işlemi iptal edildi.")

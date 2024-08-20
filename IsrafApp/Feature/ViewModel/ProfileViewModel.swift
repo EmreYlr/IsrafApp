@@ -10,6 +10,8 @@ import Foundation
 protocol ProfileViewModelProtocol {
     var delegate: ProfileViewModelOutputProtocol? { get set }
     func singoutUser()
+    func fetchUser()
+    var user: User? { get set }
 }
 
 protocol ProfileViewModelOutputProtocol: AnyObject {
@@ -19,6 +21,7 @@ protocol ProfileViewModelOutputProtocol: AnyObject {
 
 final class ProfileViewModel{
     weak var delegate: ProfileViewModelOutputProtocol?
+    var user: User? = User(data: [:])
     func singoutUser() {
         NetworkManager.shared.signOutUser { [weak self] result in
             switch result {
@@ -28,6 +31,9 @@ final class ProfileViewModel{
                 self?.delegate?.error()
             }
         }
+    }
+    func fetchUser() {
+        user = NetworkManager.shared.tempUser
     }
 }
 
