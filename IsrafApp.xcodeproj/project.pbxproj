@@ -23,6 +23,8 @@
 		C335DFEC2C6E290C008E74B5 /* DetailViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335DFEB2C6E290C008E74B5 /* DetailViewController+MapView.swift */; };
 		C335DFEE2C6E2BA5008E74B5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335DFED2C6E2BA5008E74B5 /* MapViewController.swift */; };
 		C335DFF02C6E2BBD008E74B5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335DFEF2C6E2BBD008E74B5 /* MapViewModel.swift */; };
+		C33D99B82C74F032006244F0 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D99B72C74F032006244F0 /* ResetViewController.swift */; };
+		C33D99BA2C74F051006244F0 /* ResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D99B92C74F051006244F0 /* ResetViewModel.swift */; };
 		C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E742C63921D000A5A5C /* NetworkManager.swift */; };
 		C3458E772C639325000A5A5C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3458E762C639325000A5A5C /* RegisterViewModel.swift */; };
 		C36A2E652C664FCC00C2A4FB /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36A2E642C664FCC00C2A4FB /* OrderTableViewCell.xib */; };
@@ -58,6 +60,8 @@
 		C335DFEB2C6E290C008E74B5 /* DetailViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+MapView.swift"; sourceTree = "<group>"; };
 		C335DFED2C6E2BA5008E74B5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C335DFEF2C6E2BBD008E74B5 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		C33D99B72C74F032006244F0 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		C33D99B92C74F051006244F0 /* ResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewModel.swift; sourceTree = "<group>"; };
 		C3458E742C63921D000A5A5C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C3458E762C639325000A5A5C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C36A2E632C664FCC00C2A4FB /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				C335DFEF2C6E2BBD008E74B5 /* MapViewModel.swift */,
 				C3BF7C4C2C7258090085E41B /* ProfileViewModel.swift */,
 				C3BF7C502C725C410085E41B /* PaymentViewModel.swift */,
+				C33D99B92C74F051006244F0 /* ResetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				C3BF7C482C721AED0085E41B /* MapViewController+MapView.swift */,
 				C3BF7C4A2C7257FD0085E41B /* ProfileViewController.swift */,
 				C3BF7C4E2C725BE50085E41B /* PaymentViewController.swift */,
+				C33D99B72C74F032006244F0 /* ResetViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			files = (
 				C3A634D12C64DE8C00EF8C9C /* UIViewController+Alert.swift in Sources */,
 				C3A634D52C64E51D00EF8C9C /* HomeViewModel.swift in Sources */,
+				C33D99BA2C74F051006244F0 /* ResetViewModel.swift in Sources */,
 				C3458E752C63921D000A5A5C /* NetworkManager.swift in Sources */,
 				C36A2E682C6652F000C2A4FB /* HomeViewController+TableView.swift in Sources */,
 				C333E0252C60E0E60055CB36 /* LoginViewController.swift in Sources */,
@@ -318,6 +325,7 @@
 				C3E59C932C67ACBF001600CD /* DetailViewModel.swift in Sources */,
 				C3E59C912C67ACA7001600CD /* DetailViewController.swift in Sources */,
 				C3BF7C4F2C725BE50085E41B /* PaymentViewController.swift in Sources */,
+				C33D99B82C74F032006244F0 /* ResetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
